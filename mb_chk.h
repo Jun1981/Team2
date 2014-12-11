@@ -1,0 +1,1 @@
+extern void mb_chk(int , int*);

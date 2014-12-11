@@ -16,6 +16,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 
 	// ゲームシステム初期化
+
+
+
+
 	//------ ゲームループ ------//
 	while (CheckHitKey(KEY_INPUT_ESCAPE) == 0) { // Escキーが押されるまでループ
 		ClsDrawScreen();                        // 裏画面クリア

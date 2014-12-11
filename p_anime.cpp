@@ -6,7 +6,8 @@ void p_anime(){
 		miku.anime_c--;//アニメーションカウンタマイナス
 		if (miku.anime_c <= 0){
 
-			miku.anime_c = 10;
+			if (key.z)miku.anime_c = 2;
+			else miku.anime_c = 10;
 			if (miku.anime >= 5){
 				miku.anime = 0;
 			}

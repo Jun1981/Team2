@@ -4,7 +4,13 @@
 
 jiki miku;//自機のクラス宣言
 
+
+
+
+
 void PG_Load(void){
+
+	
 	LoadDivGraph("../Img/miku/mikusan.png", 8, 8, 1, 48, 64, miku.GH, 1);//自機画像（ミクさん）
 
 	LoadDivGraph("../Img/miku/loop1000/loop0.png", 6, 6, 1, 48, 64, miku.GH_W[0], 1);//自機画像（ミクさん）下
