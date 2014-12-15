@@ -53,69 +53,29 @@ void pm(void){
 
 
 		if (key.c == 5){
-			if (miku.rx + miku.haba < 640 && miku.ry >= 0){//右上
-				miku.rx += miku.n_spd;
-				miku.ry -= miku.n_spd;
+			miku.muki = 5;
+			mb_chk(5, nokori);
 
-			/*	miku.x += miku.n_spd;
-				miku.y -= miku.n_spd;*/
-
-				miku.muki = 5;
-			}
-			else if (miku.rx + miku.haba < 640 && miku.ry <= 0){//右上で上にぶつかった時右に
-				miku.rx += miku.n_spd;
-				/*miku.x += miku.n_spd;*/
-				miku.muki = 6;
-			}
-			else if (miku.rx + miku.haba >= 640 && miku.ry > 0){//右上で右にぶつかった時上に
-				miku.ry -= miku.n_spd;
-				/*miku.y -= miku.n_spd;*/
-				miku.muki = 4;
-			}
+			miku.rx += nokori[0];
+			miku.ry -= nokori[1];
 		}
-
+		//左下
 		if (key.c == 1){
-			if (miku.rx>0 && miku.ry + miku.r_tate < 480){//左下
-				miku.rx -= miku.n_spd;
-				miku.ry += miku.n_spd;
-			/*	miku.x -= miku.n_spd;
-				miku.y += miku.n_spd;*/
-				miku.muki = 1;
-			}
-			else if (miku.rx>0 && miku.ry + miku.r_tate >= 480){//左下&下
-				miku.rx -= miku.n_spd;
-			/*	miku.x -= miku.n_spd;*/
 
-				miku.muki = 2;
-			}
-			else if (miku.rx <= 0 && miku.ry + miku.r_tate < 480){//左下＆左
-				miku.ry += miku.n_spd;
+			miku.muki = 1;
+			mb_chk(1, nokori);
 
-				miku.muki = 0;
-			}
+			miku.rx -= nokori[0];
+			miku.ry += nokori[1];
+			
 		}
 
 		if (key.c == 7){
-			if (miku.rx + miku.haba < 640 && miku.ry + miku.r_tate < 480){//右下
-				miku.rx += miku.n_spd;
-				miku.ry += miku.n_spd;
+			miku.muki = 7;
+			mb_chk(7, nokori);
 
-			/*	miku.x += miku.n_spd;
-				miku.y += miku.n_spd;*/
-				miku.muki = 7;
-			}
-			else if (miku.rx + miku.haba < 640 && miku.ry + miku.r_tate >= 480){//右下＆↓
-				miku.rx += miku.n_spd;
-
-			/*	miku.x += miku.n_spd;*/
-
-				miku.muki = 6;
-			}
-			else if (miku.rx + miku.haba >= 640 && miku.ry + miku.r_tate < 480){//右下＆右
-				miku.ry += miku.n_spd;
-			/*	miku.y += miku.n_spd;*/
-				miku.muki = 0;
-			}
+			miku.rx += nokori[0];
+			miku.ry += nokori[1];
 		}
 
 	}

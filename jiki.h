@@ -12,7 +12,7 @@ public:
 	int rx;//見た目のｘ座標
 	int muki;//向き	
 
-	int n_line[300];//斜めラインチェック用
+	int n_line[300][4];//斜めラインチェック用
 
 	int spd;//スピード
 	int n_spd;//スピード斜め
