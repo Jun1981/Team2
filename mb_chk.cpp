@@ -121,9 +121,7 @@ void mb_chk(int k, int *x){ //kキャラの向き x残りの距離
 		x[0] = miku.spd; x[1] = 0;
 		return;
 	case 7:
-		for (i = map.bn - 1; i >= 0; i--){
-			//DrawFormatString(480, 16, (255, 255, 255), "%d", miku.n_line[i]);
-
+		for (i = map.bn - 1; i >= 0; i--){			
 			if (miku.n_line[i][0] == 1){//左上にいる
 				if (miku.rx + miku.r_haba + miku.n_spd > bhit[i].x  &&  miku.ry +miku.r_tate+ miku.n_spd > bhit[i].y ){
 					DrawFormatString(480, 16, (255, 255, 255), "壁発見");
@@ -138,7 +136,7 @@ void mb_chk(int k, int *x){ //kキャラの向き x残りの距離
 
 			/*	}*/
 		}
-
+		return;
 
 
 	}//switch終わり

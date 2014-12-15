@@ -12,7 +12,7 @@ void pm(void){
 		/*	miku.x -= nokori[0];*/
 			
 		}
-		if (key.c == 6){//âE
+		else if (key.c == 6){//âE
 			miku.muki = 6;
 			mb_chk(6, nokori);
 			miku.rx += nokori[0];
@@ -20,7 +20,7 @@ void pm(void){
 			
 			}
 		//è„
-		if (key.c == 4){
+		else if (key.c == 4){
 			miku.muki = 4;
 			mb_chk(4, nokori);
 			miku.ry -= nokori[1];
@@ -28,7 +28,7 @@ void pm(void){
 
 			
 		}
-		if (key.c == 0){//â∫
+		else if (key.c == 0){//â∫
 			miku.muki = 0;
 			mb_chk(0, nokori);
 			miku.ry += nokori[1];
@@ -38,7 +38,7 @@ void pm(void){
 
 		//Ç»Ç»Çﬂ
 
-		if (key.c == 3){//ç∂è„
+		else if (key.c == 3){//ç∂è„
 			miku.muki = 3;
 			mb_chk(3, nokori);
 
@@ -52,7 +52,7 @@ void pm(void){
 		}
 
 
-		if (key.c == 5){
+		else if (key.c == 5){
 			miku.muki = 5;
 			mb_chk(5, nokori);
 
@@ -60,7 +60,7 @@ void pm(void){
 			miku.ry -= nokori[1];
 		}
 		//ç∂â∫
-		if (key.c == 1){
+		else if (key.c == 1){
 
 			miku.muki = 1;
 			mb_chk(1, nokori);
@@ -69,8 +69,8 @@ void pm(void){
 			miku.ry += nokori[1];
 			
 		}
-
-		if (key.c == 7){
+		//âEâ∫
+		else if (key.c == 7){
 			miku.muki = 7;
 			mb_chk(7, nokori);
 
